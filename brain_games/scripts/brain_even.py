@@ -1,9 +1,9 @@
 """Scritp with a game - brain-even."""
 
-from brain_games.games import brain_even
+from brain_games.games.games import brain_even
 
 
-def main():  # noqa: D103
+def main():
     brain_even()
 
 

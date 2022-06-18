@@ -3,8 +3,11 @@
 
 <a href="https://codeclimate.com/github/Noboribetsu/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/a856c4b312a249839368/maintainability" /></a>
 
-Brain-even:
+### Brain-even:
 <a href="https://asciinema.org/a/502110" target="_blank"><img src="https://asciinema.org/a/502110.svg" /></a>
 
-Brain-calc:
+### Brain-calc:
 <a href="https://asciinema.org/a/8sZUJnYWc28NJfmX4MIMDmWH9" target="_blank"><img src="https://asciinema.org/a/8sZUJnYWc28NJfmX4MIMDmWH9.svg" /></a>
+
+### Brain-gcd:
+<a href="https://asciinema.org/a/lWO8x2Pe3DEIug2Oyjvau6FBG" target="_blank"><img src="https://asciinema.org/a/lWO8x2Pe3DEIug2Oyjvau6FBG.svg" /></a>

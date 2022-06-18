@@ -1,22 +1,22 @@
 """Module with game's common fuctions."""
 
-from random import randrange
+from random import randrange, choice
 
 import prompt
+
+import math
 
 
 def welcome_user(task):
     """
     Welcome a user, ask a name.
-
     Returns: str
     ------------
     A user name.
     """
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have you name? ')
-    print('Hello, {0}!'.format(name))
-    print(task)
+    print('Hello, {0}!\n{1}'.format(name, task))
     return name
 
 
@@ -35,3 +35,61 @@ def error_msg(answer, result, name):
     """Print error message."""
     msg = "'{0}' is wrong answer ;(. Correct answer was '{1}'.\nLet's try again, {2}!"  # noqa: E501
     print(msg.format(answer, result, name))
+
+
+def game(task, game, tries=3):
+    """
+    Execure commong logic for all games.
+    Arguments:
+    ----------
+    task - task of a game.
+    game - game function.
+    tries - number of correct asnwer that user should make to win.
+    """
+    name = welcome_user(task)
+    while tries != 0:
+        question, result = game()
+        answer = ask_user(question)
+        if answer == result:
+            print('Correct!')
+            tries -= 1
+        else:
+            error_msg(answer, result, name)
+            return
+    print('Congratulations, {0}!'.format(name))
+
+
+def game_even():
+    """
+    Module for brain-even.
+    Prepare a random number and correct answer.
+    """
+    number = random_number()
+    if number % 2 == 0:
+        return number, 'yes'
+    return number, 'no'
+
+
+def game_calc():
+    """
+    Module for brain-calc.
+    Prepare a question with expression and correct answer.
+    """
+    num_1 = random_number()
+    num_2 = random_number()
+    operation = choice(['+', '-', '*'])
+    question = ' '.join([str(num_1), operation, str(num_2)])
+    result = str(eval(question))
+    return question, result
+
+
+def game_gcd():
+    """
+    Module for brain-calc.
+    Prepare a question with two random numbers and correct answer.
+    """
+    num_1 = random_number()
+    num_2 = random_number()
+    question = ' '.join([str(num_1), str(num_2)])
+    result = str(math.gcd(num_1, num_2))
+    return (question, result)

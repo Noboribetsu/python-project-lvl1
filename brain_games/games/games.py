@@ -47,7 +47,7 @@ def brain_calc(tries=3):
         num_2 = random_number()
         question = ' '.join([str(num_1), operation, str(num_2)])
         answer = ask_user(question)
-        if int(answer) == eval(question):
+        if answer == str(eval(question)):
             print('Correct!')
             tries -= 1
         else:

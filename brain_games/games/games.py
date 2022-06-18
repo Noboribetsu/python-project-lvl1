@@ -1,9 +1,12 @@
 """Module with games."""
 import random
 
+import math
+
 from brain_games.function import welcome_user, random_number
 
 from brain_games.function import ask_user, error_msg
+
 
 
 def brain_even(tries=3):
@@ -54,3 +57,21 @@ def brain_calc(tries=3):
             error_msg(answer, eval(question), name)
             return
     print('Congratulations, {0}!'.format(name))
+
+
+def brain_gcd(tries=3):
+    task = 'Find the greatest common divisor of given numbers.'
+    name = welcome_user(task)
+    while tries != 0:
+        num_1 = random_number()
+        num_2 = random_number()
+        question = ' '.join([str(num_1), str(num_2)])
+        answer = ask_user(question)
+        gcd = math.gcd(num_1, num_2)
+        if answer == str(gcd):
+            print('Correct!')
+            tries -= 1
+        else:
+            error_msg(answer, gcd, name)
+            return
+        print('Congratulations, {0}!'.format(name))

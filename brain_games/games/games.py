@@ -1,7 +1,7 @@
 """Module with games."""
 
-from brain_games.function import game_even, game_gcd, game_calc, game, game_prime
-from brain_games.function import game_progression
+from brain_games.function import game_even, game_gcd, game_calc, game
+from brain_games.function import game_progression, game_prime
 
 
 def brain_even():

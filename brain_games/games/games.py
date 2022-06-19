@@ -1,6 +1,7 @@
 """Module with games."""
 
 from brain_games.function import game_even, game_gcd, game_calc, game
+from brain_games.function import game_progression
 
 
 def brain_even():
@@ -34,3 +35,8 @@ def brain_gcd():
     """
     task = 'Find the greatest common divisor of given numbers.'
     game(task, game_gcd)
+
+
+def brain_progression():
+    task = 'What number is missing in the progression?'
+    game(task, game_progression)

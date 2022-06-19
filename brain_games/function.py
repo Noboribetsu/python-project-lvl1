@@ -93,3 +93,16 @@ def game_gcd():
     question = ' '.join([str(num_1), str(num_2)])
     result = str(math.gcd(num_1, num_2))
     return (question, result)
+
+
+def game_progression():
+    first_num = random_number()
+    diff = random_number(2, 5)
+    prg_len = 10
+    last_num = first_num + diff * (prg_len - 1)
+    prg = list(map(str, range(first_num, last_num, diff)))
+    rnd_indx = random_number(0, prg_len - 1)
+    result = prg[rnd_indx]
+    prg[rnd_indx] = '..'
+    question = ' '.join(prg)
+    return (question, result)

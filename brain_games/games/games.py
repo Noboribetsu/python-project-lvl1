@@ -51,5 +51,11 @@ def brain_progression():
 
 
 def brain_prime():
+    """
+    Game brain-prime, ask user if given number is prime or not.
+
+    User should give a correct answer 3 times to win.
+    In case of a wrong answer the game is stopped.
+    """
     task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     game(task, game_prime)

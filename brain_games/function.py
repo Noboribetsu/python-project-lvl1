@@ -86,19 +86,21 @@ def game_calc():
 def game_gcd():
     """
     Module for brain-calc.
-    Prepare a question with two random numbers and correct answer.
+    Prepare a question with two random numbers
+    and correct answer.
     """
     num_1 = random_number()
     num_2 = random_number()
     question = ' '.join([str(num_1), str(num_2)])
     result = str(math.gcd(num_1, num_2))
-    return (question, result)
+    return question, result
 
 
 def game_progression():
     """
     Module for brain-calc.
-    Prepare a question with a number prosgression, a hidden number and correct answer.
+    Prepare a question with a number prosgression,
+    a hidden number and correct answer.
     """
     first_num = random_number()
     diff = random_number(2, 5)
@@ -109,4 +111,17 @@ def game_progression():
     result = prg[rnd_indx]
     prg[rnd_indx] = '..'
     question = ' '.join(prg)
-    return (question, result)
+    return question, result
+
+
+def game_prime():
+    """
+    Module for brain-prime.
+    Prepare a question with a number and correct answer.
+    """
+    number = random_number()
+    if number > 1:
+        for i in range(2, int(number / 2) + 1):
+            if number % i == 0:
+                return number, 'no'
+    return number, 'yes'

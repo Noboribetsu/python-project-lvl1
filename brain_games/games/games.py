@@ -1,6 +1,6 @@
 """Module with games."""
 
-from brain_games.function import game_even, game_gcd, game_calc, game
+from brain_games.function import game_even, game_gcd, game_calc, game, game_prime
 from brain_games.function import game_progression
 
 
@@ -28,7 +28,8 @@ def brain_calc():
 
 def brain_gcd():
     """
-    Game brain-gcd, ask user to find the greatest common divisor of given numbers.
+    Game brain-gcd, ask user to find
+    the greatest common divisor of given numbers.
 
     User should give a correct answer 3 times to win.
     In case of a wrong answer the game is stopped.
@@ -39,10 +40,16 @@ def brain_gcd():
 
 def brain_progression():
     """
-    Game brain-progression, ask user to find a number is missing in the progression.
+    Game brain-progression, ask user to find
+    a number is missing in the progression.
 
     User should give a correct answer 3 times to win.
     In case of a wrong answer the game is stopped.
     """
     task = 'What number is missing in the progression?'
     game(task, game_progression)
+
+
+def brain_prime():
+    task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    game(task, game_prime)

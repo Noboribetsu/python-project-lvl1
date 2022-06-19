@@ -96,6 +96,10 @@ def game_gcd():
 
 
 def game_progression():
+    """
+    Module for brain-calc.
+    Prepare a question with a number prosgression, a hidden number and correct answer.
+    """
     first_num = random_number()
     diff = random_number(2, 5)
     prg_len = 10

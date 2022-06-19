@@ -38,5 +38,11 @@ def brain_gcd():
 
 
 def brain_progression():
+    """
+    Game brain-progression, ask user to find a number is missing in the progression.
+
+    User should give a correct answer 3 times to win.
+    In case of a wrong answer the game is stopped.
+    """
     task = 'What number is missing in the progression?'
     game(task, game_progression)

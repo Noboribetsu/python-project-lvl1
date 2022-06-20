@@ -1,4 +1,4 @@
-#!usr/bin/env python
+#!usr/bin/env python3
 """Main module of brain-games project."""
 from brain_games.cli import welcome_user
 
